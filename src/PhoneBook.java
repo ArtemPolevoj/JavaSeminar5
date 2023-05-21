@@ -43,7 +43,6 @@ public class PhoneBook {
     private void exit() {
         System.out.println("Выход.");
         scanner.close();
-        System.exit(1);
     }
 
     public void getBook() {
@@ -56,7 +55,9 @@ public class PhoneBook {
             switch (numberCheck) {
                 case 1 -> setPhoneBook();
                 case 2 -> getPhoneBook();
-                case 3 -> exit();
+                case 3 -> {
+                    exit();
+                }
                 default -> System.out.println("Нет такого значения.");
             }
         }
